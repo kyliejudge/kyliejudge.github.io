@@ -1,5 +1,6 @@
-/* Style the navigation menu */
-nav {
+  /* Website Navigator */
+  
+  nav {
     background-color: #333;
   }
   
@@ -29,8 +30,8 @@ nav {
   
   /* Media queries for responsive design */
   @media screen and (max-width: 600px) {
-    nav {
-      position: relative;
+    nav {relative
+      position: ;
     }
     
     nav ul {
@@ -51,34 +52,54 @@ nav {
       display: block;
     }
   }
+  
+  /* Image slider */
 
-  .slider {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-  }
-  
-  .slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .slider img.active {
-    opacity: 1;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+ .slider {
+  width: 800px; /* Set the width of the slider */
+  height: 400px; /* Set the height of the slider */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  width: calc(800px * 3); /* Set the width of the slider container to 3x the width of the slider */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 800px; /* Set the width of the images to match the width of the slider */
+  height: 400px; /* Set the height of the images to match the height of the slider */
+  object-fit: cover; /* Use object-fit to prevent stretching */
+  margin-right: 20px; /* Add margin to the right of each image to prevent overlap */
+}
+
+.slider img:last-child {
+  margin-right: 0; /* Remove the margin from the last image to prevent excess space */
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  color: #f1c40f;
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
