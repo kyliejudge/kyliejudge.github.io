@@ -1,57 +1,85 @@
-  /* Website Navigator */
-  
-  nav {
-    background-color: #333;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  nav li {
-    float: left;
-  }
-  
-  nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color on hover */
-  nav li a:hover {
-    background-color: #111;
-  }
-  
-  /* Media queries for responsive design */
-  @media screen and (max-width: 600px) {
-    nav {relative
-      position: ;
-    }
-    
-    nav ul {
-      display: none;
-    }
-    
-    nav li {
-      width: 100%;
-      float: none;
-    }
-    
-    nav li a {
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    
-    nav ul.show {
-      display: block;
-    }
-  }
+* {
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #0E0B16;
+	background-color: #E7DFDD;
+}
+
+main {
+	padding: 20px;
+}
+
+header {
+	background: linear-gradient(to right, #A239CA, #4717F6);
+	padding: 40px;
+	padding-left: 20px;
+	color: #E7DFDD;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+h1 {
+	margin: 0;
+	font-size: 24px;
+	flex: 1;
+}
+
+nav {
+	flex: 1;
+	text-align: right;
+	margin-top: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	header {
+		padding: 10px;
+	}
+	h1 {
+		flex-basis: 100%;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	nav {
+		flex-basis: 100%;
+		text-align: center;
+	}
+	nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	nav li {
+		margin: 10px;
+	}
+}
+
+iframe {
+	margin-top:20px;
+}
   
   /* Image slider */
 
@@ -93,7 +121,7 @@
 
 .slider-prev:hover,
 .slider-next:hover {
-  color: #f1c40f;
+  color: #A239CA;
 }
 
 .slider-prev {
