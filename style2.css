@@ -89,57 +89,51 @@ iframe {
   
   /* Image slider */
 
- .slider-container {
-  width: 800px;
-  height: 400px;
+ .slider {
+  width: 800px; /* Set the width of the slider */
+  height: 400px; /* Set the height of the slider */
   position: relative;
-  margin: 0 auto;
-}
-
-.slider {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
-  position: relative;
 }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.slider-container {
+  display: flex;
+  width: calc(800px * 3); /* Set the width of the slider container to 3x the width of the slider */
+  transition: transform 0.5s ease-in-out;
 }
 
-.slide.active {
-  opacity: 1;
+.slider img {
+  width: 800px; /* Set the width of the images to match the width of the slider */
+  height: 400px; /* Set the height of the images to match the height of the slider */
+  object-fit: cover; /* Use object-fit to prevent stretching */
+  margin-right: 20px; /* Add margin to the right of each image to prevent overlap */
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slider img:last-child {
+  margin-right: 0; /* Remove the margin from the last image to prevent excess space */
 }
 
-.prev-btn,
-.next-btn {
+.slider-prev,
+.slider-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
   border: none;
   background-color: transparent;
-  font-size: 30px;
+  color: #fff;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-.prev-btn {
-  left: 0;
+.slider-prev:hover,
+.slider-next:hover {
+  color: #A239CA;
 }
 
-.next-btn {
-  right: 0;
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
 }
