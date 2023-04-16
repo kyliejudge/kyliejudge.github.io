@@ -15,7 +15,7 @@ main {
 }
 
 header {
-	background: linear-gradient(to right, #A239CA, #4717F6);
+	background: linear-gradient(to right, #5F738B, #95CFF5);
 	padding: 40px;
 	padding-left: 20px;
 	color: #E7DFDD;
@@ -89,51 +89,57 @@ iframe {
   
   /* Image slider */
 
- .slider {
-  width: 800px; /* Set the width of the slider */
-  height: 400px; /* Set the height of the slider */
+ .slider-container {
+  width: 800px;
+  height: 400px;
   position: relative;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-.slider-container {
-  display: flex;
-  width: calc(800px * 3); /* Set the width of the slider container to 3x the width of the slider */
-  transition: transform 0.5s ease-in-out;
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.slider img {
-  width: 800px; /* Set the width of the images to match the width of the slider */
-  height: 400px; /* Set the height of the images to match the height of the slider */
-  object-fit: cover; /* Use object-fit to prevent stretching */
-  margin-right: 20px; /* Add margin to the right of each image to prevent overlap */
+.slide.active {
+  opacity: 1;
 }
 
-.slider img:last-child {
-  margin-right: 0; /* Remove the margin from the last image to prevent excess space */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.slider-prev,
-.slider-next {
+.prev-btn,
+.next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
   border: none;
   background-color: transparent;
-  color: #fff;
-  font-size: 2rem;
+  font-size: 30px;
   cursor: pointer;
 }
 
-.slider-prev:hover,
-.slider-next:hover {
-  color: #A239CA;
+.prev-btn {
+  left: 0;
 }
 
-.slider-prev {
-  left: 10px;
-}
-
-.slider-next {
-  right: 10px;
+.next-btn {
+  right: 0;
 }

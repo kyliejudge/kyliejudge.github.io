@@ -15,7 +15,7 @@ main {
 }
 
 header {
-	background: linear-gradient(to right, #A239CA, #4717F6);
+	background: linear-gradient(to right, #5F738B, #95CFF5);
 	padding: 40px;
 	padding-left: 20px;
 	color: #E7DFDD;
@@ -54,33 +54,34 @@ nav a {
 	font-size: 16px;
 }
 
-@media (max-width: 1007px) {
-	header {
+header {
 		padding: 10px;
-	}
-	h1 {
+
+}
+
+h1 {
 		flex-basis: 100%;
 		margin-bottom: 10px;
 		text-align: center;
-	}
-	nav {
+}
+
+nav {
 		flex-basis: 100%;
 		text-align: center;
-	}
-	nav ul {
+}
+
+nav ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-	}
-	nav li {
+}
+	
+nav li {
 		margin: 10px;
-	}
-	main {
+}
+
+main {
 		text-align: center;
-	}
-	iframe {
-		width: 80%;
-	}
 }
 
 iframe {
